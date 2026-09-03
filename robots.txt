@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://khaledabdullah5550-blip.github.io/andalusian-build/sitemap.xml
