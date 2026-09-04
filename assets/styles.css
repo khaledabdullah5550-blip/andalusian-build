@@ -1,26 +1,884 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap');
-:root{--ink:#171a1c;--ink-2:#272c2f;--muted:#6f777a;--paper:#fbfaf7;--stone:#f1eee7;--card:#ffffff;--bronze:#a87945;--bronze-2:#c7a77f;--line:#dedbd4;--dark:#151918;--dark-2:#202624;--success:#2d6a4f;--radius:18px;--radius-lg:30px;--shadow:0 22px 70px rgba(24,27,26,.09);--wrap:1200px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.8;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.wrap{width:min(var(--wrap),calc(100% - 40px));margin-inline:auto}
-.topbar{background:var(--dark);color:#e8e4dc;font-size:13px}.topbar .wrap{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:18px}.topbar a{color:#fff}.topbar .service-area{display:flex;align-items:center;gap:9px}.topbar .service-area:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--bronze-2);box-shadow:0 0 0 4px rgba(199,167,127,.12)}
-.site-header{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(222,219,212,.85)}.nav{min-height:84px;display:flex;align-items:center;gap:28px}.brand{display:flex;align-items:center;gap:12px;font-weight:700;line-height:1.3;white-space:nowrap}.brand-mark{width:42px;height:42px;border-radius:12px;background:var(--dark);display:grid;place-items:center;position:relative;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}.brand-mark:before,.brand-mark:after{content:"";position:absolute;border:1px solid var(--bronze-2);width:24px;height:24px;transform:rotate(45deg)}.brand-mark:after{width:12px;height:12px;background:var(--bronze-2)}.brand-copy{font-size:17px}.brand-copy small{display:block;color:var(--muted);font-size:10.5px;font-weight:600;letter-spacing:.02em;margin-top:2px}.navlinks{margin-inline:auto;display:flex;align-items:center;gap:8px;font-size:14px;font-weight:600}.navlinks>a,.navlinks details>summary{padding:10px 12px;border-radius:10px;cursor:pointer;list-style:none}.navlinks>a:hover,.navlinks details>summary:hover{background:var(--stone)}.navlinks details{position:relative}.navlinks details>summary::-webkit-details-marker{display:none}.navlinks details>summary:after{content:"⌄";margin-right:7px;color:var(--muted)}.nav-dropdown{position:absolute;top:48px;right:0;width:270px;padding:10px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}.nav-dropdown a{display:block;padding:11px 12px;border-radius:10px}.nav-dropdown a:hover{background:var(--stone)}.nav-actions{display:flex;align-items:center;gap:9px}.menu-btn{display:none;width:44px;height:44px;border:1px solid var(--line);border-radius:12px;background:#fff;font-size:20px;cursor:pointer}
-.cta{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:10px 18px;border-radius:12px;background:var(--dark);color:#fff;font-weight:700;border:1px solid var(--dark);transition:.2s ease;box-shadow:0 8px 22px rgba(21,25,24,.10)}.cta:hover{transform:translateY(-1px);background:#262d2a}.cta.alt{background:transparent;color:var(--dark);border-color:#cfcac0;box-shadow:none}.cta.alt:hover{background:#fff}.cta.bronze{background:var(--bronze);border-color:var(--bronze)}
-.hero{padding:86px 0 76px;position:relative;overflow:hidden}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0 49.8%,rgba(23,26,28,.032) 50%,transparent 50.2%),linear-gradient(rgba(23,26,28,.025) 0 49.8%,transparent 50.2%);background-size:88px 88px;mask-image:linear-gradient(to bottom,black,transparent 80%);pointer-events:none}.hero-grid{position:relative;display:grid;grid-template-columns:1.02fr .98fr;gap:70px;align-items:center}.eyebrow,.kicker{display:inline-flex;align-items:center;gap:9px;color:var(--bronze);font-size:13px;font-weight:700;letter-spacing:.01em}.eyebrow:before,.kicker:before{content:"";width:28px;height:1px;background:var(--bronze)}.hero h1,.page-hero h1{font-size:clamp(44px,6vw,76px);font-weight:700;line-height:1.12;letter-spacing:-.045em;margin:16px 0 24px}.hero p,.page-hero p{font-size:18px;color:var(--muted);max-width:700px;line-height:1.95}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:30px}.hero-media{min-height:520px;border-radius:var(--radius-lg);background:linear-gradient(145deg,#202624,#101312);position:relative;overflow:hidden;box-shadow:var(--shadow);isolation:isolate}.hero-media:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px);background-size:54px 54px;opacity:.42}.hero-media:after{content:"";position:absolute;width:360px;height:360px;border:1px solid rgba(199,167,127,.6);border-radius:50%;left:-70px;top:-60px;box-shadow:0 0 0 70px rgba(199,167,127,.05),0 0 0 140px rgba(199,167,127,.025)}.hero-media-copy{position:absolute;inset:auto 32px 30px 32px;z-index:2;border-top:1px solid rgba(255,255,255,.2);padding-top:22px;color:#fff}.hero-media-copy span{font-size:12px;color:#c6ccc9}.hero-media-copy strong{display:block;font-size:30px;line-height:1.35;margin-top:8px}.hero-badge{position:absolute;top:28px;right:28px;z-index:3;background:rgba(255,255,255,.94);border-radius:14px;padding:12px 14px;font-size:12px;font-weight:700;color:var(--ink)}.trust{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:38px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.trust div{padding:19px 16px;border-left:1px solid var(--line)}.trust div:last-child{border-left:0}.trust strong{display:block;font-size:16px}.trust span{font-size:12.5px;color:var(--muted)}
-section{padding:82px 0}.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:40px;margin-bottom:34px}.section-head>div{max-width:720px}.section-head h2{font-size:clamp(32px,4.5vw,50px);line-height:1.25;letter-spacing:-.035em;margin:10px 0 0}.section-head p{max-width:540px;color:var(--muted);margin:0}.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;transition:.22s ease}.card:hover{transform:translateY(-3px);border-color:#c9c2b7;box-shadow:0 18px 45px rgba(24,27,26,.06)}.card h3{margin:10px 0 8px;font-size:20px;line-height:1.45}.card p{color:var(--muted);margin:0;font-size:15px}.num{font-weight:700;color:var(--bronze);font-size:12px;letter-spacing:.08em}.dark-section{background:var(--dark);color:#fff}.dark-section .section-head h2{color:#fff}.dark-section p{color:#aeb7b3}.process{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:#343b38;border:1px solid #343b38;border-radius:22px;overflow:hidden}.process .card{border:0;border-radius:0;background:var(--dark-2);color:#fff;min-height:190px}.process .card:hover{transform:none;box-shadow:none;background:#252c29}
-.project-card{display:grid;grid-template-columns:1.1fr .9fr;background:#fff;border-radius:26px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow)}.project-visual{min-height:430px;background:linear-gradient(135deg,#d8d0c3,#8d9892 48%,#29322f);position:relative;overflow:hidden}.project-visual:before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,transparent 48%,rgba(255,255,255,.16) 49%,transparent 50%);background-size:80px 80px}.project-visual:after{content:"دراسة حالة";position:absolute;bottom:24px;right:24px;background:#fff;padding:9px 13px;border-radius:10px;font-size:12px;font-weight:700}.project-copy{padding:48px;display:flex;justify-content:center;flex-direction:column}.project-copy h3{font-size:34px;line-height:1.35;margin:0 0 12px}.quote{border-right:3px solid var(--bronze);padding:14px 20px;background:#fff;border-radius:0 12px 12px 0}.faq details{background:#fff;border-top:1px solid var(--line);border-left:0;border-right:0;border-bottom:0;padding:21px 4px}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-weight:700;font-size:16px}.faq p{color:var(--muted);max-width:780px}
-.page-hero{padding:74px 0 50px;background:linear-gradient(180deg,#f2efe8 0%,var(--paper) 100%);border-bottom:1px solid var(--line)}.page-hero h1{font-size:clamp(42px,5.5vw,66px);margin-bottom:16px}.breadcrumbs{font-size:12px;color:#8a918f;margin-bottom:18px}.content-grid{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:52px}.content-grid article>h2,.content-grid article section>h2{font-size:32px;line-height:1.35;margin-top:0}.sidebox{position:sticky;top:110px;height:max-content}.service-list{display:grid;gap:5px}.service-list a{padding:11px 12px;border-bottom:1px solid var(--line);font-weight:600;font-size:14px}.service-list a:last-child{border-bottom:0}.callout{background:var(--stone);border:1px solid #ded7c9;border-radius:20px;padding:28px;margin-top:28px}
-#about{scroll-margin-top:110px}.about-band{display:grid;grid-template-columns:.75fr 1.25fr;gap:64px;align-items:start}.about-stat{background:var(--dark);color:#fff;border-radius:24px;padding:30px}.about-stat strong{font-size:28px;display:block}.about-stat p{color:#aeb7b3}.muted{color:var(--muted)}ul.clean{padding-right:20px}.footer{background:#0f1312;color:#fff;padding:58px 0 22px}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:50px}.footer .brand-copy{color:#fff}.footer p,.footer a{color:#aeb7b3}.footer a:hover{color:#fff}.footer strong{font-size:13px;color:#fff}.foot-bottom{border-top:1px solid #2a302e;margin-top:38px;padding-top:18px;color:#79827e;font-size:12px}.mobile-wa{display:none;position:fixed;right:14px;left:14px;bottom:14px;z-index:60;box-shadow:0 12px 30px rgba(0,0,0,.2)}
-@media(max-width:980px){.wrap{width:min(100% - 28px,var(--wrap))}.nav{min-height:72px}.navlinks{display:none;position:absolute;top:72px;right:14px;left:14px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:10px;box-shadow:var(--shadow)}.navlinks.open{display:block}.navlinks>a,.navlinks details>summary{display:block}.navlinks details{position:static}.nav-dropdown{position:static;width:auto;box-shadow:none;border:0;padding:5px 12px 8px}.menu-btn{display:grid;place-items:center}.nav-actions>.cta{display:none}.hero-grid,.content-grid,.project-card,.about-band{grid-template-columns:1fr}.hero-media{min-height:390px}.grid-3{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.sidebox{position:static}.footer-grid{grid-template-columns:1fr 1fr}.footer-grid>div:first-child{grid-column:1/-1}.mobile-wa{display:flex}.footer{padding-bottom:92px}}
-@media(max-width:640px){.topbar .wrap{justify-content:center}.topbar .wrap>a{display:none}.brand-mark{width:38px;height:38px}.brand-copy{font-size:15px}.brand-copy small{font-size:9px}.hero{padding:54px 0 50px}.hero h1,.page-hero h1{font-size:40px;letter-spacing:-.03em}.hero p,.page-hero p{font-size:16px}.hero-media{min-height:330px}.hero-media-copy strong{font-size:24px}.trust{grid-template-columns:1fr 1fr}.trust div:nth-child(2){border-left:0}.trust div:nth-child(-n+2){border-bottom:1px solid var(--line)}section{padding:62px 0}.section-head{display:block}.section-head p{margin-top:14px}.grid-3,.process{grid-template-columns:1fr}.process{gap:1px}.project-copy{padding:28px}.project-visual{min-height:280px}.page-hero{padding:50px 0 38px}.footer-grid{grid-template-columns:1fr}.footer-grid>div:first-child{grid-column:auto}.content-grid article>h2,.content-grid article section>h2{font-size:27px}}
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-/* V3 production refinements */
-.phone-number{direction:ltr;unicode-bidi:isolate;display:inline-block;letter-spacing:.02em;font-variant-numeric:tabular-nums}
-.hero-photo{background-image:linear-gradient(180deg,rgba(8,12,11,.08),rgba(8,12,11,.68)),url('/andalusian-build/assets/projects/tayseer/interior.jpeg');background-size:cover;background-position:center}
-.hero-photo:before{background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.18));opacity:1}.hero-photo:after{display:none}
-.project-photo{background-image:linear-gradient(180deg,transparent 55%,rgba(10,14,13,.45)),url('/andalusian-build/assets/projects/tayseer/reception.jpeg');background-size:cover;background-position:center}.project-photo:before{display:none}
-.project-gallery{display:grid;grid-template-columns:1.3fr .7fr;grid-template-rows:260px 260px;gap:14px;margin-bottom:38px}.project-gallery figure{margin:0;position:relative;overflow:hidden;border-radius:20px;background:#ece8df}.project-gallery figure:first-child{grid-row:1/3}.project-gallery img{width:100%;height:100%;object-fit:cover}.project-gallery figcaption{position:absolute;right:14px;bottom:14px;background:rgba(15,19,18,.82);color:#fff;padding:7px 11px;border-radius:9px;font-size:12px;backdrop-filter:blur(8px)}
-@media(max-width:640px){.project-gallery{grid-template-columns:1fr;grid-template-rows:330px 250px 250px}.project-gallery figure:first-child{grid-row:auto}.topbar .wrap>a{display:inline-flex}}
+<title>مؤسسة البناء الأندلسي | مقاولات وتشطيبات في الخبر والدمام والظهران</title>
+
+<meta name="description" content="مؤسسة البناء الأندلسي للمقاولات العامة تقدم خدمات التشطيبات التجارية والسكنية والترميم والتصميم الداخلي في الخبر والدمام والظهران. اطلب معاينة لمشروعك.">
+
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#121716">
+
+<link rel="canonical" href="https://khaledabdullah5550-blip.github.io/andalusian-build/">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="مؤسسة البناء الأندلسي | مقاولات وتشطيبات في المنطقة الشرقية">
+<meta property="og:description" content="تشطيبات تجارية وسكنية وترميم وتصميم داخلي في الخبر والدمام والظهران.">
+<meta property="og:url" content="https://khaledabdullah5550-blip.github.io/andalusian-build/">
+<meta property="og:image" content="https://khaledabdullah5550-blip.github.io/andalusian-build/assets/projects/tayseer/interior.jpeg">
+<meta property="og:locale" content="ar_SA">
+
+<link rel="stylesheet" href="/andalusian-build/assets/styles.css?v=5.0">
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"HomeAndConstructionBusiness",
+      "@id":"https://khaledabdullah5550-blip.github.io/andalusian-build/#business",
+      "name":"مؤسسة البناء الأندلسي للمقاولات العامة",
+      "description":"مقاولات وتشطيبات وترميم وتصميم داخلي للمشاريع السكنية والتجارية في الخبر والدمام والظهران.",
+      "telephone":"+966551441737",
+      "areaServed":[
+        {"@type":"City","name":"الخبر"},
+        {"@type":"City","name":"الدمام"},
+        {"@type":"City","name":"الظهران"}
+      ],
+      "sameAs":[
+        "https://www.instagram.com/andalusianbuild/"
+      ]
+    },
+    {
+      "@type":"WebPage",
+      "@id":"https://khaledabdullah5550-blip.github.io/andalusian-build/#webpage",
+      "url":"https://khaledabdullah5550-blip.github.io/andalusian-build/",
+      "name":"مؤسسة البناء الأندلسي | مقاولات وتشطيبات في الخبر والدمام والظهران",
+      "description":"تشطيبات تجارية وسكنية وترميم وتصميم داخلي في الخبر والدمام والظهران.",
+      "about":{
+        "@id":"https://khaledabdullah5550-blip.github.io/andalusian-build/#business"
+      },
+      "inLanguage":"ar-SA"
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"هل يمكن تنفيذ تشطيب كامل أو بنود منفصلة؟",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"نعم، يمكن تحديد نطاق المشروع كتجهيز متكامل أو أعمال محددة حسب احتياج الموقع."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"ما المناطق التي تخدمونها؟",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"نخدم الخبر والدمام والظهران ضمن نطاق أعمال المؤسسة الحالي."
+      }
+    },
+    {
+      "@type":"Question",
+      "name":"كيف أبدأ بطلب معاينة؟",
+      "acceptedAnswer":{
+        "@type":"Answer",
+        "text":"أرسل نوع المشروع وموقعه وصور الحالة الحالية عبر واتساب للمساعدة على فهم نطاق العمل قبل المعاينة."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="service-area">
+      نخدم الخبر • الدمام • الظهران
+    </span>
+
+    <a href="tel:+966551441737">
+      <bdi class="phone-number" dir="ltr">0551441737</bdi>
+    </a>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="wrap nav">
+
+    <a class="brand"
+       href="/andalusian-build/"
+       aria-label="البناء الأندلسي — الرئيسية">
+
+      <span class="brand-mark" aria-hidden="true"></span>
+
+      <span class="brand-copy">
+        البناء الأندلسي
+        <small>للمقاولات العامة</small>
+      </span>
+
+    </a>
+
+    <nav class="navlinks" aria-label="التنقل الرئيسي">
+
+      <a href="/andalusian-build/">
+        الرئيسية
+      </a>
+
+      <details>
+        <summary>الخدمات</summary>
+
+        <div class="nav-dropdown">
+          <a href="/andalusian-build/services/commercial-fitout/">
+            التشطيبات التجارية
+          </a>
+
+          <a href="/andalusian-build/services/residential/">
+            تشطيب الفلل والشقق
+          </a>
+
+          <a href="/andalusian-build/services/renovation/">
+            الترميم والتجديد
+          </a>
+
+          <a href="/andalusian-build/services/interior-design/">
+            التصميم الداخلي
+          </a>
+        </div>
+      </details>
+
+      <a href="/andalusian-build/projects/">
+        المشاريع
+      </a>
+
+      <a href="/andalusian-build/#about">
+        عن المؤسسة
+      </a>
+
+      <a href="/andalusian-build/contact/">
+        تواصل
+      </a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <a class="cta"
+         href="https://wa.me/966551441737?text=مرحباً،%20أرغب%20بطلب%20معاينة%20أو%20عرض%20سعر">
+        طلب معاينة
+      </a>
+
+      <button
+        class="menu-btn"
+        type="button"
+        aria-label="فتح القائمة"
+        aria-expanded="false">
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+</header>
 
 
-/* V4 verified project imagery */
-.hero-image-wrap,.project-image-wrap{position:relative;overflow:hidden;background:#e9e5dd}.hero-image,.project-image{width:100%;height:100%;display:block;object-fit:cover}.hero-image{min-height:520px}.project-image{min-height:430px}.hero-image-wrap:before,.hero-image-wrap:after,.project-image-wrap:before,.project-image-wrap:after{display:none}.hero-image-wrap .hero-media-copy{background:linear-gradient(180deg,transparent,rgba(15,19,18,.78));inset:auto 0 0;padding:72px 30px 28px;border-top:0}.hero-image-wrap .hero-badge{position:absolute}.project-image-wrap{min-height:430px}.project-image-wrap .project-image{position:absolute;inset:0}.project-gallery{display:grid;grid-template-columns:1.25fr .75fr;grid-template-rows:300px 300px;gap:14px;margin:0 0 38px}.project-gallery figure{margin:0;position:relative;overflow:hidden;border-radius:20px;background:#ece8df}.project-gallery figure:first-child{grid-row:1/3}.project-gallery img{width:100%;height:100%;object-fit:cover}.project-gallery figcaption{position:absolute;right:14px;bottom:14px;background:rgba(15,19,18,.84);color:#fff;padding:7px 11px;border-radius:9px;font-size:12px;backdrop-filter:blur(8px)}
-@media(max-width:640px){.hero-image{min-height:360px}.project-image{min-height:300px}.project-image-wrap{min-height:300px}.project-gallery{grid-template-columns:1fr;grid-template-rows:360px 300px 300px}.project-gallery figure:first-child{grid-row:auto}}
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="wrap hero-grid">
+
+    <div>
+
+      <span class="eyebrow">
+        مقاولات وتشطيبات في المنطقة الشرقية
+      </span>
+
+      <h1>
+        تشطيبات تجارية وسكنية من المعاينة حتى التسليم.
+      </h1>
+
+      <p>
+        تنفيذ وتشطيب وترميم للمحلات والمكاتب والفلل والشقق
+        في الخبر والدمام والظهران، بنطاق عمل واضح يناسب
+        احتياج كل مشروع.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="cta"
+           href="https://wa.me/966551441737?text=مرحباً،%20لدي%20مشروع%20وأرغب%20بطلب%20معاينة">
+          اطلب معاينة
+        </a>
+
+        <a class="cta alt"
+           href="/andalusian-build/projects/">
+          شاهد مشاريعنا
+        </a>
+
+      </div>
+
+
+      <div class="trust">
+
+        <div>
+          <strong>تجاري</strong>
+          <span>محلات • مكاتب • مطاعم • معارض</span>
+        </div>
+
+        <div>
+          <strong>سكني</strong>
+          <span>فلل • شقق • تشطيبات داخلية</span>
+        </div>
+
+        <div>
+          <strong>ترميم</strong>
+          <span>تجديد وتأهيل المساحات</span>
+        </div>
+
+        <div>
+          <strong>المنطقة الشرقية</strong>
+          <span>الخبر • الدمام • الظهران</span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-media hero-image-wrap">
+
+      <img
+        class="hero-image"
+        src="/andalusian-build/assets/projects/tayseer/interior.jpeg?v=5.0"
+        alt="أعمال تشطيب داخلي من مشروع التيسير"
+        width="960"
+        height="1280"
+        fetchpriority="high"
+        decoding="async"
+      >
+
+      <div class="hero-badge">
+        مقاولات • تشطيبات • ترميم
+      </div>
+
+      <div class="hero-media-copy">
+        <span>من أعمالنا</span>
+
+        <strong>
+          مشروع التيسير
+        </strong>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+        <span class="kicker">
+          خدماتنا
+        </span>
+
+        <h2>
+          خدمات تنفيذ وتشطيب تناسب طبيعة كل مشروع.
+        </h2>
+      </div>
+
+      <p>
+        يمكن تنفيذ المشروع بشكل متكامل أو تحديد بنود معينة
+        حسب حالة الموقع ومتطلبات العمل.
+      </p>
+
+    </div>
+
+
+    <div class="services-grid">
+
+      <a class="card"
+         href="/andalusian-build/services/commercial-fitout/">
+
+        <span class="num">01</span>
+
+        <h3>
+          التشطيبات التجارية
+        </h3>
+
+        <p>
+          تجهيز وتشطيب المحلات والمكاتب والكوفيهات
+          والمطاعم والمعارض والمساحات التجارية.
+        </p>
+
+        <span class="card-link">
+          استكشف الخدمة ←
+        </span>
+
+      </a>
+
+
+      <a class="card"
+         href="/andalusian-build/services/residential/">
+
+        <span class="num">02</span>
+
+        <h3>
+          تشطيب الفلل والشقق
+        </h3>
+
+        <p>
+          أعمال التشطيب الداخلي للمشاريع السكنية
+          الجديدة أو القائمة.
+        </p>
+
+        <span class="card-link">
+          استكشف الخدمة ←
+        </span>
+
+      </a>
+
+
+      <a class="card"
+         href="/andalusian-build/services/renovation/">
+
+        <span class="num">03</span>
+
+        <h3>
+          الترميم والتجديد
+        </h3>
+
+        <p>
+          تحديث المساحات وإعادة تأهيلها بما يناسب
+          الاستخدام الجديد أو الحالي.
+        </p>
+
+        <span class="card-link">
+          استكشف الخدمة ←
+        </span>
+
+      </a>
+
+
+      <a class="card"
+         href="/andalusian-build/services/interior-design/">
+
+        <span class="num">04</span>
+
+        <h3>
+          التصميم الداخلي
+        </h3>
+
+        <p>
+          تنظيم المساحات وتطوير التصور الداخلي بما يخدم
+          الاستخدام والهوية المطلوبة للمشروع.
+        </p>
+
+        <span class="card-link">
+          استكشف الخدمة ←
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROCESS -->
+
+<section class="dark-section">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="kicker">
+          طريقة العمل
+        </span>
+
+        <h2>
+          من فهم الموقع إلى التسليم.
+        </h2>
+
+      </div>
+
+      <p>
+        خطوات واضحة تساعد على تحديد احتياج المشروع
+        ونطاق العمل قبل وأثناء التنفيذ.
+      </p>
+
+    </div>
+
+
+    <div class="process">
+
+      <div class="card">
+
+        <span class="num">01</span>
+
+        <h3>المعاينة</h3>
+
+        <p>
+          فهم الموقع والحالة الحالية ومتطلبات المشروع.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="num">02</span>
+
+        <h3>تحديد النطاق</h3>
+
+        <p>
+          تحديد الأعمال المطلوبة والمواد والمواصفات الأساسية.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="num">03</span>
+
+        <h3>التنفيذ</h3>
+
+        <p>
+          تنفيذ ومتابعة مراحل العمل حسب نطاق المشروع.
+        </p>
+
+      </div>
+
+
+      <div class="card">
+
+        <span class="num">04</span>
+
+        <h3>التسليم</h3>
+
+        <p>
+          مراجعة الأعمال وإنهاء الملاحظات المتفق عليها.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PROJECT -->
+
+<section>
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="kicker">
+          من أعمالنا
+        </span>
+
+        <h2>
+          مشروع التيسير
+        </h2>
+
+      </div>
+
+      <p>
+        شاهد نموذجًا فعليًا من أعمالنا وتفاصيل
+        المساحات الداخلية والواجهة.
+      </p>
+
+    </div>
+
+
+    <article class="project-card">
+
+      <a
+        class="project-visual project-image-wrap"
+        href="/andalusian-build/projects/tayseer/"
+        aria-label="عرض مشروع التيسير">
+
+        <img
+          class="project-image"
+          src="/andalusian-build/assets/projects/tayseer/reception.jpeg?v=5.0"
+          alt="منطقة الاستقبال في مشروع التيسير"
+          width="720"
+          height="1280"
+          loading="lazy"
+          decoding="async"
+        >
+
+      </a>
+
+
+      <div class="project-copy">
+
+        <span class="kicker">
+          مساحة تجارية
+        </span>
+
+        <h3>
+          تفاصيل من مشروع التيسير
+        </h3>
+
+        <p class="muted">
+          شاهد لقطات فعلية من المساحات الداخلية،
+          منطقة الاستقبال والواجهة الخارجية للمشروع.
+        </p>
+
+        <p>
+          <a class="cta alt"
+             href="/andalusian-build/projects/tayseer/">
+            شاهد صور المشروع
+          </a>
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+  <div class="wrap about-band">
+
+    <div class="about-stat">
+
+      <span class="kicker">
+        عن المؤسسة
+      </span>
+
+      <strong>
+        تنفيذ واضح.<br>
+        نطاق محدد.
+      </strong>
+
+      <p>
+        نخدم المشاريع السكنية والتجارية في المنطقة الشرقية،
+        مع الاهتمام بوضوح الأعمال والتفاصيل خلال مراحل المشروع.
+      </p>
+
+    </div>
+
+
+    <div>
+
+      <div class="section-head">
+
+        <div>
+
+          <span class="kicker">
+            البناء الأندلسي
+          </span>
+
+          <h2>
+            تنفيذ منظم للمشاريع السكنية والتجارية في المنطقة الشرقية.
+          </h2>
+
+        </div>
+
+      </div>
+
+      <p class="muted">
+        مؤسسة البناء الأندلسي للمقاولات العامة تقدم خدمات
+        المقاولات والتشطيبات والترميم والتصميم الداخلي
+        في الخبر والدمام والظهران.
+      </p>
+
+      <p class="muted">
+        يمكن أن يشمل نطاق العمل تنفيذًا متكاملًا للمشروع
+        أو تنفيذ بنود محددة بحسب حالة الموقع واحتياجه.
+      </p>
+
+      <div class="hero-actions">
+
+        <a class="cta alt"
+           href="/andalusian-build/contact/">
+          تواصل معنا
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONVERSION -->
+
+<section class="conversion-band">
+
+  <div class="wrap conversion-inner">
+
+    <div>
+
+      <span class="kicker">
+        ابدأ مشروعك
+      </span>
+
+      <h2>
+        عندك موقع يحتاج تشطيب أو تجديد؟
+      </h2>
+
+      <p>
+        أرسل نوع المشروع، المدينة وصور الموقع عبر واتساب
+        لبدء فهم نطاق العمل.
+      </p>
+
+    </div>
+
+    <a
+      class="cta bronze"
+      href="https://wa.me/966551441737?text=مرحباً،%20لدي%20مشروع%20وأرغب%20بطلب%20معاينة%20أو%20عرض%20سعر">
+      أرسل تفاصيل المشروع
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- FAQ -->
+
+<section class="faq">
+
+  <div class="wrap">
+
+    <div class="section-head">
+
+      <div>
+
+        <span class="kicker">
+          أسئلة شائعة
+        </span>
+
+        <h2>
+          قبل أن تبدأ مشروع التشطيب.
+        </h2>
+
+      </div>
+
+    </div>
+
+
+    <details>
+
+      <summary>
+        هل يمكن تنفيذ تشطيب كامل أو بنود منفصلة؟
+      </summary>
+
+      <p>
+        نعم، يمكن تحديد نطاق المشروع كتجهيز متكامل
+        أو أعمال محددة حسب احتياج الموقع.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        ما المناطق التي تخدمونها؟
+      </summary>
+
+      <p>
+        نخدم الخبر والدمام والظهران ضمن نطاق أعمال المؤسسة الحالي.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        هل تنفذون مشاريع تجارية؟
+      </summary>
+
+      <p>
+        تشمل خدماتنا تشطيب وتجهيز المحلات والمكاتب
+        والكوفيهات والمطاعم والمعارض والمساحات التجارية.
+      </p>
+
+    </details>
+
+
+    <details>
+
+      <summary>
+        كيف أبدأ بطلب معاينة؟
+      </summary>
+
+      <p>
+        أرسل نوع المشروع وموقعه وصور الحالة الحالية عبر واتساب
+        للمساعدة على فهم نطاق العمل قبل المعاينة.
+      </p>
+
+    </details>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+  <div class="wrap">
+
+    <div class="footer-grid">
+
+      <div>
+
+        <a class="brand"
+           href="/andalusian-build/">
+
+          <span class="brand-mark"
+                aria-hidden="true">
+          </span>
+
+          <span class="brand-copy">
+            البناء الأندلسي
+            <small>
+              للمقاولات العامة
+            </small>
+          </span>
+
+        </a>
+
+        <p>
+          مقاولات وتشطيبات وترميم وتصميم داخلي
+          للمشاريع السكنية والتجارية في
+          الخبر والدمام والظهران.
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          الخدمات
+        </strong>
+
+        <p>
+
+          <a href="/andalusian-build/services/commercial-fitout/">
+            التشطيبات التجارية
+          </a>
+          <br>
+
+          <a href="/andalusian-build/services/residential/">
+            تشطيب الفلل والشقق
+          </a>
+          <br>
+
+          <a href="/andalusian-build/services/renovation/">
+            الترميم والتجديد
+          </a>
+          <br>
+
+          <a href="/andalusian-build/services/interior-design/">
+            التصميم الداخلي
+          </a>
+
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <strong>
+          تواصل
+        </strong>
+
+        <p>
+
+          <a href="tel:+966551441737">
+            <bdi class="phone-number" dir="ltr">
+              0551441737
+            </bdi>
+          </a>
+
+          <br>
+
+          <a href="https://wa.me/966551441737">
+            واتساب
+          </a>
+
+          <br>
+
+          <a
+            href="https://www.instagram.com/andalusianbuild/"
+            rel="noopener">
+            Instagram @andalusianbuild
+          </a>
+
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="foot-bottom">
+
+      © <span data-year></span>
+      مؤسسة البناء الأندلسي للمقاولات العامة.
+      جميع الحقوق محفوظة.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<a
+  class="cta mobile-wa"
+  href="https://wa.me/966551441737?text=مرحباً،%20أرغب%20بطلب%20معاينة%20أو%20عرض%20سعر">
+  اطلب معاينة عبر واتساب
+</a>
+
+
+<script
+  src="/andalusian-build/assets/site.js?v=5.0"
+  defer>
+</script>
+
+</body>
+</html>
